@@ -16,11 +16,11 @@ export const PassengerView = () => {
     })
 
     const images = new Map<number, string>([
-        [1, '/res/img/01-rodadero.jpg'],
-        [2, '/res/img/01-marina.jpg'],
-        [3, '/res/img/01-taganga.jpg'],
-        [4, '/res/img/01-playa-blanca.jpg'],
-        [5, '/res/img/01-playa-grande.jpg'],
+        [1, '/sitramasa-client/res/img/01-rodadero.jpg'],
+        [2, '/sitramasa-client/res/img/01-marina.jpg'],
+        [3, '/sitramasa-client/res/img/01-taganga.jpg'],
+        [4, '/sitramasa-client/res/img/01-playa-blanca.jpg'],
+        [5, '/sitramasa-client/res/img/01-playa-grande.jpg'],
     ])
 
     const values = getValues() 

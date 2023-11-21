@@ -24,7 +24,7 @@ export const useAuth = () => {
     const isAuthenticated = () => authInfo !== null && authInfo !== false;
 
     const login = async (credentials: LoginPayload) => {
-        const response = await axios.post('api/auth', credentials);
+        const response = await axios.post('/api/auth', credentials);
         const authInfo = response.data as AuthInfo;
         setAuthInfo(authInfo)
         return authInfo;

@@ -38,7 +38,7 @@ export const SignUp = () => {
                             <button className='auth-button auth-btn-alt' type="submit"> Regitrarse </button>
                         </div>
                         <label className="auth-label">¿Ya tienes una cuenta?
-                            <Link className="auth-text" to='/login'> Iniciar sesión </Link>
+                            <Link className="auth-text" to='/sitramasa-client/login'> Iniciar sesión </Link>
                         </label>
                     </Form>
                 </div>

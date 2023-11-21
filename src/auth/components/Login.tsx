@@ -9,6 +9,8 @@ export const Login = () => {
     const { login, isAuthenticated } = useAuth()
     const { handleSubmit, handleChange } = useForm<LoginPayload>()
 
+    console.log("hello world")
+
     if (isAuthenticated()) {
         redirect('/')
     }
@@ -29,7 +31,7 @@ export const Login = () => {
                             <button className='auth-button auth-btn-alt' type="submit"> Entrar </button>
                         </div>
                         <label className='auth-label'>¿No tienes una cuenta?
-                            <Link className='auth-text' to="/signup"> Registrarse </Link>
+                            <Link className='auth-text' to="/sitramasa-client/signup"> Registrarse </Link>
                         </label>
                     </Form>
                 </div>

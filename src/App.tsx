@@ -10,17 +10,17 @@ import { MainPage } from './MainPage'
 const router = RR.createBrowserRouter([
   {
     id: 'root',
-    path: '/',
+    path: '/sitramasa-client/',
     Component: Init
   },
   {
     id: 'login',
-    path: '/login',
+    path: '/sitramasa-client/login',
     Component: Login
   },
   {
     id: 'signup',
-    path: '/signup',
+    path: '/sitramasa-client/signup',
     Component: SignUp
   }
 ])

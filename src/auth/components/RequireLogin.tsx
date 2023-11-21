@@ -6,7 +6,7 @@ export const RequireLogin = ({ children }: ChildProp) => {
     const { isAuthenticated } = useAuth();
     
     if (!isAuthenticated()) {
-      return <Navigate to="/login" />
+      return <Navigate to="/sitramasa-client/login" />
     }
   
     return <> { children } </>
