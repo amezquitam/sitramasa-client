@@ -1,4 +1,4 @@
-#pg-container {
+.pg-container {
     width: 100%;
     min-height: 100vh;
     display: grid;
@@ -82,12 +82,20 @@
     font-size: 20px;
 }
 
+.black {
+    color: #000;
+    border: 5px black solid;
+}
+
+.light {
+    color: white;
+    border: 5px white solid;
+}
+
 .pg-button {
     margin-top: 25px;
     padding: 12px 24px;
     border-radius: 10px;
-    color: white;
-    border: 5px white solid;
     font-size: 20px;
     cursor: pointer;
     transition: 400ms;
@@ -100,4 +108,23 @@
 
 .pg-num-inp:focus {
     outline: none;
+}
+
+.viajes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+    max-height: 100%;
+}
+
+.viajes ul {
+    background-color: #f799a354;
+    margin: 0;
+    padding: 20px 35px;
+}
+
+.viajes li {
+    list-style: none;
+    text-indent: none;
 }
