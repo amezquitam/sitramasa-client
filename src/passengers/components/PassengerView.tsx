@@ -1,12 +1,11 @@
 import { Form } from 'react-router-dom'
-import './PassengerView.css'
-import { useDock } from '../../docks/hooks/useDock'
+import { docks } from '../../docks/dockData'
 import { NoUserSelect } from '../../util/components/NoUserSelect'
 import { useForm } from 'react-hook-form'
+import './PassengerView.css'
 
 
 export const PassengerView = () => {
-    const docks = useDock()
     const { register, getValues, watch } = useForm({
         defaultValues: {
             startDock: 1,
@@ -57,7 +56,7 @@ export const PassengerView = () => {
                         </select>
                     </div>
                     <h1 className='pg-label'>Número de personas</h1>
-                    <input {...register("numOfPeople")} className='pg-num-inp' min={1} max={30} defaultValue={2} type="number" />
+                    <input {...register("numOfPeople")} className='pg-num-inp' min={1} max={30} defaultValue={1} type="number" />
                     <div className="pg-button">Consultar</div>
                 </Form>
             </div>

@@ -1,0 +1,10 @@
+.card-anomalie {
+    padding: 40px 60px;
+    border-radius: 15px;
+    background-color: #f799a354;
+    margin: 10px 0;
+}
+
+.container {
+    overflow-y: scroll;
+}

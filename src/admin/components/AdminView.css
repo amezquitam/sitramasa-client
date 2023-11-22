@@ -1,0 +1,86 @@
+#admin-panel {
+    display: grid;
+    position: relative;
+    height: 95%;
+    width: 95%;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 95vh;
+}
+
+.admin-bg {
+    background: linear-gradient(
+        106.37deg,
+        #ffe1bc 29.63%,
+        #ffcfd1 51.55%,
+        #f3c6f1 90.85%
+    );
+}
+
+.admin-glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#admin-menu {
+    border-radius: 20px 0 0 20px;
+}
+
+#admin-notifications {
+    border-radius: 0 20px 20px 0;
+}
+
+.bar-gap {
+    margin: 50px 0 0 40px;
+}
+
+.mark {
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    font-size: 11px;
+    text-decoration: none;
+    color: black;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.options a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 15px;
+    margin: 5px 0;
+    font-size: 16px;
+    position: relative;
+    border-radius: 0 15px 15px 0;
+} 
+
+.options a:hover {
+    background-color: #f799a354;
+}
+.options a.active {
+    background-color: #f799a354;
+}
+.options a.active::before {
+    content: " ";
+    position: absolute;
+    height: 41px;
+    width: 5px;
+    left: 0px;
+    top: 0;
+    background-color: #FF919D;
+}
+
+#admin-current {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}

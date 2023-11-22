@@ -1,0 +1,35 @@
+
+
+.card {
+    padding: 55px;
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: #f0f8ff77;
+    display: grid;
+    place-items: center;
+    transition: 400ms;
+    font-size: 24px;
+    flex: 1;
+    height: min-content;
+}
+
+.text {
+    width: 172px;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: rgba(155, 222, 255, 0.594);
+    color: white;
+    font-weight: 900;
+    padding: 75px;
+}
+
+@media (width < 855px) {
+    .card {
+        padding: 55px;
+    }
+    .card:hover {
+        padding: 65px;
+    }
+}
