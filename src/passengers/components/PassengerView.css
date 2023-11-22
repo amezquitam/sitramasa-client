@@ -110,21 +110,82 @@
     outline: none;
 }
 
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.result h2 {
+    color: coral;
+}
+
 .viajes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     row-gap: 15px;
     column-gap: 15px;
     max-height: 100%;
 }
 
-.viajes ul {
-    background-color: #f799a354;
+.trip {
+    border-radius: 15px;
+    border: 1px coral solid;
+    display: grid;
+    width: 60vw;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 150px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.trip ul {
     margin: 0;
     padding: 20px 35px;
 }
 
-.viajes li {
+.trip li {
     list-style: none;
     text-indent: none;
+}
+
+.trip img {
+    width: 100%;
+}
+
+.result .pg-button {
+    border-width: 1px;
+}
+
+.pg-pay {
+    grid-column: 2;
+    display: flex;
+    justify-content: end;
+}
+
+.pg-pay.pg-button {
+    margin: 0;
+    border-radius: 0;
+    padding: 10px;
+    background-color: coral;
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.pg-info {
+    display: flex;
+    align-items: center;
+    grid-column: 0;
+}
+
+.pg-info ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pg-ext {
+    grid-template-rows: 150px 50px;
 }

@@ -1,0 +1,44 @@
+.pg-container {
+    background-color: rgb(34, 15, 9)
+}
+
+.bv-title {
+    color: #fff;
+}
+
+.grid-doble {
+    height: 80vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    color: #fff;
+}
+
+.grid-doble img {
+    width: 100%;
+}
+
+.all-btw {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bm-view .pg-button {
+    border: 1px solid white;
+    text-align: center;
+}
+
+.bm-view h2, .bm-view h1, .bm-view h3 {
+    color: coral;
+}
+
+.bm-view .pg-button:hover {
+    border: 1px solid coral;
+}
+
+.al-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
