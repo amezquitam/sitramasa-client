@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de tiquetes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.gratistodo.com/wp-content/uploads/2017/02/Playas-Wallpapers-4.jpg'); /* Asegúrate de reemplazar esta URL con la de tu imagen de fondo */
+      background-size: cover;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    #ticket-form {
+      background: rgba(255, 255, 255, 0.8);
+      margin: 50px auto;
+      padding: 30px;
+      width: 70%;
+      box-shadow: 10px 10px 5px #888888;
+    }
+    #ticket-form label {
+      display: block;
+      padding: 5px 0;
+      font-weight: bold;
+    }
+    #ticket-form input[type="text"],
+    #ticket-form select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    #ticket-form button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      color: #fff;
+      background: #333;
+      border: none;
+      border-radius: 5px;
+    }
+    #ticket-form button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form id="ticket-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="tipo_tiquete">Tipo de tiquete:</label>
+    <select id="tipo_tiquete" name="tipo_tiquete">
+      <option value="normal">Normal</option>
+      <option value="vip">VIP</option>
+    </select><br><br>
+
+    <label for="ruta">Ruta:</label>
+    <select id="ruta" name="ruta">
+      <option value="Rodadero-Playa Blanca">Rodadero - Playa Blanca</option>
+      <option value="Rodadero-La Marina">Rodadero - La Marina</option>
+      <option value="Rodadero-Taganga">Rodadero - Taganga</option>
+      <option value="Rodadero-Playa Grande">Rodadero - Playa Grande</option>
+      <option value="Playa Blanca-La Marina">Playa Blanca - La Marina</option>
+      <option value="Playa Blanca-Taganga">Playa Blanca - Taganga</option>
+      <option value="Playa Blanca-Playa Grande">Playa Blanca - Playa Grande</option>
+      <option value="La Marina-Taganga">La Marina - Taganga</option>
+      <option value="La Marina-Playa Grande">La Marina - Playa Grande</option>
+      <option value="Taganga-Playa Grande">Taganga - Playa Grande</option>
+    </select><br><br>
+
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" name="precio" readonly><br><br>
+
+    <button type="button" onclick="calcularPrecio()">Calcular precio</button>
+    <button type="button" onclick="vender()">Vender</button>
+  </form>
+</div>
+
+<script>
+  function calcularPrecio() {
+    var tipoTiquete = document.getElementById("tipo_tiquete").value;
+    var ruta = document.getElementById("ruta").value;
+
+    var precio;
+    switch (ruta) {
+      case "Rodadero-Playa Blanca":
+        precio = tipoTiquete === "vip" ? 50000 : 30000;
+        break;
+      case "Rodadero-La Marina":
+        precio = tipoTiquete === "vip" ? 40000 : 25000;
+        break;
+      case "Rodadero-Taganga":
+        precio = tipoTiquete === "vip" ? 45000 : 28000;
+        break;
+      case "Rodadero-Playa Grande":
+        precio = tipoTiquete === "vip" ? 55000 : 35000;
+        break;
+      case "Playa Blanca-La Marina":
+        precio = tipoTiquete === "vip" ? 35000 : 20000;
+        break;
+      case "Playa Blanca-Taganga":
+        precio = tipoTiquete === "vip" ? 40000 : 25000;
+        break;
+      case "Playa Blanca-Playa Grande":
+        precio = tipoTiquete === "vip" ? 45000 : 28000;
+        break;
+      case "La Marina-Taganga":
+        precio = tipoTiquete === "vip" ? 30000 : 18000;
+        break;
+      case "La Marina-Playa Grande":
+        precio = tipoTiquete === "vip" ? 40000 : 25000;
+        break;
+      case "Taganga-Playa Grande":
+        precio = tipoTiquete === "vip" ? 35000 : 20000;
+        break;
+    }
+
+    document.getElementById("precio").value = precio;
+  }
+
+  function vender() {
+    alert("¡Gracias por su compra!");
+  }
+</script>
+</body>
+</html>
