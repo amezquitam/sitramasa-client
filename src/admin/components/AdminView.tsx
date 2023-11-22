@@ -1,12 +1,9 @@
 import { Link, Outlet, useLocation } from "react-router-dom"
 import './AdminView.css'
-import logo from '/sitramasa-client/res/img/02-logo.png'
+import logo from './02-logo.png'
 
 export const AdminView = () => {
     const { pathname } = useLocation()
-    
-    
-    
 
     return (
         <div className="scr-container admin-bg">
