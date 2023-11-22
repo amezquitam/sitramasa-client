@@ -117,7 +117,7 @@ function ExpandedCard({ param, setExpanded }) {
       </div>
         <span>{param.title}</span>
       <div className="chartContainer">
-        <Chart options={data.options} series={param.series} type="area" />
+        <Chart options={data.options as ApexCharts.ApexOptions} series={param.series} type="area" />
       </div>
       <span>{ param.time }</span>
     </motion.div>
